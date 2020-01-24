@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
-<script src="lib/d3.v5.min.js"></script>
-<script src="lib/d3-scale-chromatic.v1.min.js"></script>
-<script src="lib/d3-tip.min.js"></script>
-<script src="lib/topojson.v2.min.js"></script>
-<script src="lib/d3-simple-slider.min.js"></script>
+<script src="https://d3js.org/d3.v5.min.js"></script>
+<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.9.1/d3-tip.min.js"></script>
+<script src="https://d3js.org/topojson.v2.min.js"></script>
+<script src="https://unpkg.com/d3-simple-slider"></script>
 <title>Global Warming Twitter Sentiment</title>
 <link
   rel="stylesheet"
@@ -104,7 +104,7 @@
     var usData = null;
     var stateMap = null;
 
-    var US_NAME = "United States";
+    var US_NAME = "World";
 
     var promises = [
         d3.json("states-10m.json"),
