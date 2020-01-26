@@ -1,3 +1,5 @@
+models/BERT-transfer1/tf_model.h5
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
