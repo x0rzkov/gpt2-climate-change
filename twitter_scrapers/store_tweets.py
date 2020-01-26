@@ -10,7 +10,7 @@ from twitter_query import query
 oauth = OAuthHandler(twitter_consumer_key, twitter_consumer_secret)
 oauth.set_access_token(twitter_access_token, twitter_access_secret)
 
-api = API(oauth)
+api = API(oauth, wait_on_rate_limit=True)
 
 # Open/create a file to append data to
 with open('data/tweets.csv', 'w', encoding='utf-8') as file:
@@ -22,4 +22,4 @@ with open('data/tweets.csv', 'w', encoding='utf-8') as file:
         cleaned = ''.join([c for c in text if ord(c) < 128])
 
         writer.writerow([cleaned, tweet.user.location, tweet.created_at])
-        # print(tweet.created_at, text)
+        print(tweet.created_at, text.encode('utf-8'))

@@ -40,4 +40,4 @@ if __name__ == '__main__':
                          '#greennewdeal','#actonclimate','#climateaction','#fridaysforfuture', \
                          '#parisagreement','#climatedebate','#sustainability', \
                          '#climatetownhall','#climatemarch','#earthday','#climatehope', \
-                         '#climatejustice'])                
+                         '#climatejustice'])

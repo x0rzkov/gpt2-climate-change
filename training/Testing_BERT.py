@@ -17,11 +17,11 @@ from transformers.configuration_bert import BertConfig
 # In[ ]:
 
 
-tokenizer = BertTokenizer('../models/BERT-vocab.dms')
+tokenizer = BertTokenizer('../models/BERT-vocab1.dms')
 
-config = BertConfig.from_json_file('../models/BERT-config.json')
+config = BertConfig.from_json_file('../models/BERT-config0.json')
 
-model = TFBertForSequenceClassification.from_pretrained('../models/BERT-transfer', config=config)
+model = TFBertForSequenceClassification.from_pretrained('../models/BERT-transfer1', config=config)
 
 
 # In[ ]:
@@ -82,14 +82,14 @@ for feat, lab in eval_df.take(-1):
 import matplotlib.pyplot as plt
 import seaborn as sns
 import pandas as pandas
-get_ipython().magic(u'matplotlib inline')
-confusion = tf.math.confusion_matrix(y_true, y_preds_argmax).numpy()
+# get_ipython().magic(u'matplotlib inline')
+# confusion = tf.math.confusion_matrix(y_true, y_preds_argmax).numpy()
 
-sns.heatmap(confusion, annot = True, fmt='g', cmap = plt.cm.Blues, )
-plt.xlabel('Predicted label')
-plt.ylabel('True label')
+# sns.heatmap(confusion, annot = True, fmt='g', cmap = plt.cm.Blues, )
+# plt.xlabel('Predicted label')
+# plt.ylabel('True label')
 
-plt.show()
+# plt.show()
 
 # classes 0, 1, 2 refer to labels 0, -1, 1 in this model. 
 # this will be changed to make more sense i nthe future
@@ -98,9 +98,8 @@ plt.show()
 # In[ ]:
 
 
-from sklearn.metrics import classification_report
-
-print(classification_report(y_true, y_preds_argmax))
+# from sklearn.metrics import classification_report
+# print(classification_report(y_true, y_preds_argmax))
 
 
 # In[ ]:
